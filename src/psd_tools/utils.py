@@ -201,8 +201,8 @@ def read_pascal_string(fp, encoding='macroman', padding=2):
     # detect and decode Shift_JIS string
     # some of the popular paint software are encoding layer names in Shift_JIS
     charset_guess = nkf.guess(data)
-    print(f'string in bytes: {data}')
-    print(f'nkf guess : {charset_guess}')
+    # print(f'string in bytes: {data}')
+    # print(f'nkf guess : {charset_guess}')
     if charset_guess == 'Shift_JIS':
         return data.decode('shift_jis')
     return data.decode(encoding)
